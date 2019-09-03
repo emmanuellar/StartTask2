@@ -96,14 +96,14 @@ margin-left:0px!important;
   form{
     margin-top:20px;
   }
-  input[type=button]{
+  input[type=submit]{
     background-color: #17365D;
     border: 1px solid #17365D;
     color:#ffffff;
     cursor:pointer;
     margin-top:20px;
   }
-  input[type=button]:hover{
+  input[type=submit]:hover{
     background-color: rgb(93, 43, 23);
     border: 1px solid rgb(93, 43, 23);
     color:#ffffff;
