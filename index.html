@@ -144,14 +144,14 @@
 
                                     <h4>CONTACT ME</h4>
                                     <hr>
-                                    <form>
+                                    <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
                                         <div class="inputs">
                                             <label class="name">Name</label><br />
-                                            <input id="name" minlength="4" type="text" placeholder="Enter your name" required><br />
+                                            <input id="name" name="Name" minlength="4" type="text" placeholder="Enter your name" pattern="[a-zA-Z]+" required><br />
                                         </div>
                                         <div class="inputs">
                                             <label class="email">Email</label><br />
-                                            <input id="email" type="email" placeholder="Enter your Email Address" required><br />
+                                            <input id="email" name="EMail" type="email" placeholder="Enter your Email Address" required><br />
                                         </div>
                                         <div class="inputs">
                                             <label class="title">Title</label><br />
@@ -160,7 +160,7 @@
                                         
                                         <label class="message">Message</label><br />
                                         <textarea cols="40" minlength="20" rows="3" required></textarea>
-                                        <input type="button" value="Send Message"> 
+                                        <input type="submit" value="Send Message"> 
                                     </form>
                             </div>
                         </div>
@@ -168,6 +168,28 @@
             </section>
            
     </div>
-    
+    <script>
+            function validate()
+
+               if( document.myForm.EMail.value == "" )
+               {
+                  alert( "Please provide your Email!" );
+                  document.myForm.EMail.focus() ;
+                  return false;
+               }
+               
+               let emailID = document.myForm.EMail.value;
+               atpos = emailID.indexOf("@");
+               dotpos = emailID.lastIndexOf(".");
+               
+               if (atpos < 1 || (dotpos - atpos < 2 )) 
+               {
+                  alert("Please enter correct email ID")
+                  document.myForm.EMail.focus() ;
+                  return false;
+               }
+               return( true );
+            }
+          </script>
 </body>
 </html>
