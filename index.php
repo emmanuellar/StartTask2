@@ -1,3 +1,16 @@
+<?php
+              
+
+    $name=$_POST['Name'];
+    $email=$_POST['EMail'];
+    $title=$_POST['Title'];
+    $message=$_POST['Message'];
+    $both = "Name; ". $name . " ," ."Email: ". $email . " ,"."Title: ". $title." ,". "Message: ".$message;
+    $fp = fopen('data.txt', 'a');
+    fwrite($fp, $both);
+    fclose($fp);
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -144,7 +157,7 @@
 
                                     <h4>CONTACT ME</h4>
                                     <hr>
-                                    <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
+                                    <form  method="post" name="myForm" >
                                         <div class="inputs">
                                             <label class="name">Name</label><br />
                                             <input id="name" name="Name" minlength="4" type="text" placeholder="Enter your name" pattern="[a-zA-Z]+" required><br />
@@ -155,11 +168,11 @@
                                         </div>
                                         <div class="inputs">
                                             <label class="title">Title</label><br />
-                                            <input id="title" type="text" placeholder="Enter your Message Title" required><br />
+                                            <input id="title" type="text" placeholder="Enter your Message Title" name="Title" required><br />
                                         </div>
                                         
                                         <label class="message">Message</label><br />
-                                        <textarea cols="40" minlength="20" rows="3" required></textarea>
+                                        <textarea cols="40" minlength="20" rows="3"name="Message" required></textarea> 
                                         <input type="submit" value="Send Message"> 
                                     </form>
                             </div>
@@ -212,3 +225,6 @@
           </script>
 </body>
 </html>
+
+
+
