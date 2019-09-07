@@ -17,9 +17,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Resume</title>
+    <title>Amarachi Emmanuela Azubuike's Resume</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <meta name="description" content="This is Amarachi Azubuike's Profile. It contains both her professional details and her career details">
 </head>
 <body>
     <div>
@@ -29,11 +30,11 @@
                 <div class="row1">
                     <div class="column1">
                         <span>
-                            <img class="image" src="https://res.cloudinary.com/inaaga/image/upload/v1566422226/amy.jpg" alt="Amarachi's Passport">   
+                            <img class="image" src="https://res.cloudinary.com/inaaga/image/upload/v1566422226/amy.jpg" alt="Amarachi's picture">   
                         </span> 
                     </div>
                     <div class="column2">
-                        <h1>AMARACHI EMMANUELLA AZUBUIKE</h1>
+                        <h1>AMARACHI EMMANUELA AZUBUIKE</h1>
                         <p>Software Developer</p>
                         <br />
                         
